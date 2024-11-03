@@ -1,46 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie Picker</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Select</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
     <header>
-      <h1>Escolha seu Filme</h1>
-    </header>
-    
-    <div class="card-container">
-      <div class="movie-card active" style="background-image: url('movie1.jpg');">
-        <div class="movie-info">
-          <h2>Filme 1</h2>
-          <p></p>
-        </div>
-      </div>
-      
-      <div class="movie-card" style="background-image: url('movie2.jpg');">
-        <div class="movie-info">
-          <h2>Filme 2</h2>
-          <p></p>
-        </div>
-      </div>
-      
-      <div class="movie-card" style="background-image: url('movie3.jpg');">
-        <div class="movie-info">
-          <h2>Filme 3</h2>
-          <p></p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="buttons">
-      <button id="dislike-btn">❌ Passa</button>
-      <button id="like-btn">❤️ Like</button>
-    </div>
-  </div>
+        <img src="cineselect.png" alt="Recomendações de Filmes" id="logo">
+        <div id="search-container">
+            <input type="text" id="search" placeholder="Buscar filmes...">
+            <label for="genero">Gênero:</label>
+            <select id="genero">
+                <option value="">Todos</option>
+                <option value="ação">Ação</option>
+                <option value="aventura">Aventura</option>
+                <option value="animação">Animação</option>
+                <option value="biografia">Biografia</option>
+                <option value="comédia">Comédia</option>
+                <option value="crime">Crime</option>
+                <option value="drama">Drama</option>
+                <option value="ficção científica">Ficção Científica</option>
+                <option value="faroeste">Faroeste</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="guerra">Guerra</option>
+                <option value="mistério">Mistério</option>
+                <option value="romance">Romance</option>
+                <option value="suspense">Suspense</option>
+                <option value="terror">Terror</option>
+                </select>
 
-  <script src="script.js"></script>
+            <label for="idade">Classificação:</label>
+            <select id="idade">
+                <option value="">Todas</option>
+                <option value="L">Livre</option>
+                <option value="10">10 anos</option>
+                <option value="12">12 anos</option>
+                <option value="14">14 anos</option>
+                <option value="16">16 anos</option>
+                <option value="18">18 anos</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <section id="destaques">
+            <h2 style="color: #ac6d00;">Filmes</h2>
+            <div id="filmes-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Samuel Felipe Lima de Carvalho 2ºD</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
